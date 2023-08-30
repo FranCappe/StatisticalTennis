@@ -209,6 +209,7 @@ div{
   border: 2px solid transparent;
   border-radius: 8px;
   transition: all 0.3s ease; /* Transición suave para los efectos */
+  background-color: white;
 }
 
 /* Estilos para cuando el cursor está sobre las secciones */
