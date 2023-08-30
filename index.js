@@ -10,15 +10,24 @@ app.use(express.static(path.join(__dirname, './public')));
 //CONTROLLERS
 
 const navegationController = require ('./server/controllers/navegationController');
+const userController = require ('./server/controllers/userController');
 
 
 //ROUTES
 app.get('/', navegationController.getIndex);
-app.get('/', navegationController.getHits);
-app.get('/', navegationController.getRegister);
-app.get('/', navegationController.getLogin);
-app.get('/', navegationController.getErrors);
-app.get('/', navegationController.getService);
+app.get('/hits', navegationController.getHits);
+app.get('/register', navegationController.getRegister);
+app.get('/login', navegationController.getLogin);
+app.get('/errors', navegationController.getErrors);
+app.get('/service', navegationController.getService);
+
+
+
+//API
+
+app.get('/api/users', userController.getAll)
+app.post('/api/user', userController.getCreate)
+
 
 app.get('/', (req, res) => {});
 
