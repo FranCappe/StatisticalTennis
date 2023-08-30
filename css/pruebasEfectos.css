@@ -1,0 +1,40 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+  }
+  
+  .court {
+    position: relative;
+    width: 400px;
+    height: 200px;
+    background-color: #1d7b49;
+  }
+  
+  .ball {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #f15a24;
+    border-radius: 50%;
+    animation: moveBall 2s ease-in-out infinite alternate;
+  }
+  
+  @keyframes moveBall {
+    from {
+      left: 10px;
+    }
+    to {
+      left: 370px;
+    }
+  }
+
+  
+  
+  
+  
+  
+  

@@ -1,0 +1,253 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+  }
+
+  h1 {
+    text-align: center;
+    color: #3db319;
+    font-size: 36px;
+    margin-top: 30px;
+  }
+
+  .container {
+    max-width: 400px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  h2 {
+    text-align: center;
+    color: #1da10c;
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+
+  .form-group {
+    margin-bottom: 20px;
+  }
+
+  label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #32aa1a;
+  }
+
+  input[type="email"],
+  input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+  }
+
+  input[type="email"]:focus,
+  input[type="password"]:focus {
+    outline: none;
+    border-color: #d4d4d2;
+  }
+
+  button {
+    background-color: #4dca1c;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+
+  button:hover {
+    background-color: #155c04;
+  }
+
+
+  .container {
+    animation: slideIn 2s ease;
+  }
+
+  @keyframes slideIn {
+    0% {
+      transform: translateY(150%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  .center
+{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-505,-50%);
+}
+.ball
+{
+    position: center;
+    width: 150px;
+    height: 150px;
+    background: #c9f364;
+    border-radius: 50%;
+    transform: translate(-50%,-50%);
+    overflow: hidden;
+    animation: animate 1.5s linear infinite;
+}
+.ball:before
+{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    box-sizing: border-box;
+    background: transparent;
+    border: 5px solid #fff;
+    left: -65%;
+    filter: blur(1px);
+}
+.ball:after
+{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    box-sizing: border-box;
+    background: transparent;
+    border: 5px solid #fff;
+    right: -65%;
+    filter: blur(1px);
+}
+@keyframes animate 
+{
+    0%
+    {
+        transform: translate(-50%,-50%) translateY(-200px) rotate(0deg);
+    }
+    50%
+    {
+        transform: translate(-50%,-50%) translateY(0px) rotate(180deg);
+    }
+    100%
+    {
+        transform: translate(-50%,-50%) translateY(-200px) rotate(360deg);
+    }
+}
+.shadow
+{
+    position: absolute;
+    width: 150px;
+    height: 50px;
+    transform: translate(-50%,100%);
+    background: rgba(0,0,0,.2);
+    border-radius: 50%;
+    z-index: -1;
+    filter: blur(2px);
+    animation: shadow 1.5s linear infinite;
+}
+@keyframes shadow
+{
+    0%
+    {
+        transform:  translate(-50%,100%) scale(1);
+    }
+    50%
+    {
+        transform:  translate(-50%,100%) scale(.5);
+    }
+    100%
+    {
+        transform:  translate(-50%,100%) scale(1);
+    }
+}
+
+
+#title{
+    text-align: center;
+    align-items: center;
+}
+
+
+.golpesH{
+    font-size: large;
+}
+
+div{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.log{
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 20px;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+
+
+
+
+.hidden{
+    overflow: hidden;
+}
+
+.Loading
+{
+  color: #28a745;  
+  position: absolute;
+  font-family:verdana;
+  align-items: center;
+  top: 50%;
+  right: 40%; 
+  animation: heartbeat 1s infinite;
+  transform: translate(-50%, -50%);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.Loading a
+{
+  text-decoration:none;
+  color:#fff;
+}
+@keyframes heartbeat {
+    0% {
+      transform: scale(1); /* Escala normal */
+    }
+    50% {
+      transform: scale(1.1); /* Escala un poco más grande */
+    }
+    100% {
+      transform: scale(1); /* Vuelve a la escala normal */
+    }
+  }
+
+
+.Loading:hover{
+  border-color: #2e7f10; 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
+  transform: scale(1.05);
+}
+
+
+.logo img{
+  width: 150px;
+  height: auto;
+}

@@ -1,0 +1,96 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+  }
+
+  #container {
+    max-width: 400px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  h2 {
+    text-align: center;
+    color: #00d400;
+    font-size: 24px; /* Ajusta el tamaño de fuente según tus preferencias */
+    margin-bottom: 20px; /* Espaciado inferior para separar del formulario */
+  }
+
+  .form-group {
+    margin-bottom: 15px;
+  }
+
+  label {
+    display: block;
+    font-weight: bold;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  button {
+    background-color: #29c80d;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+  }
+
+  button:hover {
+    background-color: #368307;
+}
+h1{
+    text-align: center;
+    
+}
+
+.container {
+  animation: slideIn 2s ease;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateY(150%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+
+
+.botoncillo{
+  display: inline-block;
+  padding: 10px;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.botoncillo:hover{
+  border-color: #2e7f10; 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
+  transform: scale(1.05);
+}
+
+.logo img{
+  width: 150px;
+  height: auto;
+  position: relative;
+  display: flex;
+  right: 50px;
+}
