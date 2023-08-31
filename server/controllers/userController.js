@@ -7,8 +7,8 @@ const getAll = (req, res) => {
 
 
 const create = (req, res) => {
-    const {name, email, password} = req.body;
-    res.send({name, email, password});
+    const {username, email, password} = req.body;
+    res.send({username, email, password});
 }
 
 module.exports = {
