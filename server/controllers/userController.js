@@ -1,4 +1,3 @@
-const { get } = require("mongoose");
 
 const getAll = (req, res) => {
     res.send('Get all users');
@@ -7,11 +6,12 @@ const getAll = (req, res) => {
 
 
 
-const getCreate = (req, res) => {
-    res.send('Create user')
+const create = (req, res) => {
+    const {name, email, password} = req.body;
+    res.send({name, email, password});
 }
 
 module.exports = {
     getAll,
-    getCreate
+    create
 }

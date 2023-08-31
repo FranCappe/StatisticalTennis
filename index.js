@@ -5,6 +5,7 @@ const app = express();
 
 //MIDDLEWARE
 app.use(express.static(path.join(__dirname, './public')));
+app.use(express.json());
 
 
 //CONTROLLERS
@@ -26,7 +27,7 @@ app.get('/service', navegationController.getService);
 //API
 
 app.get('/api/users', userController.getAll)
-app.post('/api/user', userController.getCreate)
+app.post('/api/user', userController.create)
 
 
 app.get('/', (req, res) => {});
