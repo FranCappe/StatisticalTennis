@@ -1,4 +1,4 @@
-const { response } = require ('express');
+const { response } = ('express');
 
 const formulario = document.getElementById('registro');
 const usernameInput = document.getElementById('username');

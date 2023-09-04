@@ -2,8 +2,6 @@ const { get } = require('http');
 const path = require ('path');
 
 
-
-
 const getIndex = (req, res) => {
         const filePath = path.join(__dirname, '../../public/index.html')
         res.sendFile(filePath);
