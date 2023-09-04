@@ -1,4 +1,4 @@
-const { response } = require("express");
+const { response } = require ('express');
 
 const formulario = document.getElementById('registro');
 const usernameInput = document.getElementById('username');
@@ -11,7 +11,7 @@ formulario.addEventListener('submit', (e) => {
             const username = usernameInput.value
             const password = passwordInput.value
             const email = emailInput.value
-        const body = {username, password, email};
+            const body = {username, password, email};
 
 
 
@@ -21,10 +21,9 @@ formulario.addEventListener('submit', (e) => {
         headers: {
             'Content-Type': 'application/json'
         }
-    
     })
 
-    .then(response => response.json())
-    .then(data => console.log(data))
-    .catch(err => console.log(err))
+   .then(response => response.json())
+   .then(data => console.log(data))
+   .catch(err => console.log(err))
 }); 

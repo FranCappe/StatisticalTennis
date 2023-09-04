@@ -1,10 +1,7 @@
-
 const getAll = (req, res) => {
     res.send('Get all users');
 
 }
-
-
 
 const create = (req, res) => {
     const {username, email, password} = req.body;
