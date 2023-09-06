@@ -1,31 +1,34 @@
-window.onload = function(){
+window.onload = function(){      //pantalla de carga
     alert('Loaded succesfully');
     $('#onload').fadeOut();
     $('body').removeClass('hidden');
     const FORM = document.getElementById('hits-form')
     console.log(FORM)
 
+    //Creamos evento   
+
     FORM.addEventListener ("submit", function(event){
         event.preventDefault();
         console.log("test")
-        let dateInput = FORM['date'].value;    
-        let forehandInput = FORM ['hit-forehand'].value;
-        let backhandInput = FORM ['hit-backhand'].value;
-        let forehandVolleyInput = FORM ['hit-forehand-volley'].value;
-        let backhandackhandVolleyInput = FORM ['hit-backhand-volley'].value;
-        let smashInput = FORM ['hit-smash'].value;
-        let sliceInput = FORM ['hit-slice'].value;
-        let dropInput = FORM ['hit-drop'].value;
-        console.log({dateInput, forehandInput, backhandInput,forehandVolleyInput, backhandackhandVolleyInput, smashInput, sliceInput, dropInput})
+        let date = FORM['date'].value;    
+        let Forehand = FORM ['hit-forehand'].value;
+        let Backhand = FORM ['hit-backhand'].value;
+        let ForehandVolley = FORM ['hit-forehand-volley'].value;
+        let BackhandVolley = FORM ['hit-backhand-volley'].value;
+        let Smash = FORM ['hit-smash'].value;
+        let Slice = FORM ['hit-slice'].value;
+        let Drop = FORM ['hit-drop'].value;
+        
         
         
         //El fetch para la api de hits 
 
-        fetch("/api/hits", {
+        fetch('/api/hits', {
             method: 'POST',
-            body: JSON.stringify(body),
+            body: JSON.stringify({date, Forehand, Backhand, ForehandVolley, BackhandVolley, Smash, Slice, Drop}),
             headers: {
                 'Content-Type': 'application/json'
             }
         })
+        
 })}

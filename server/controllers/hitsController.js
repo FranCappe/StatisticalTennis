@@ -14,9 +14,9 @@ const getAll = async (req, res) => {
 
 
 const create = async (req, res) => {
-    const {id, date, Forehand, BackHand, ForehandVolley, BackHandVolley, Smash, Slice, Drop} = req.body;
+    const {id, date, Forehand, BackHand, ForehandVolley, BackhandVolley, Smash, Slice, Drop} = req.body;
     await conectarDB();
-    const hits = new Hits (id, date, Forehand, BackHand, ForehandVolley, BackHandVolley, Smash, Slice, Drop)
+    const hits = new Hits (id, date, Forehand, BackHand, ForehandVolley, BackhandVolley, Smash, Slice, Drop)
     const newHits = await hits.save();
     res.json(newHits);
 }
