@@ -168,6 +168,8 @@ div{
   text-decoration:none;
   color:#fff;
 }
+
+
 @keyframes heartbeat {
     0% {
       transform: scale(1); /* Escala normal */
