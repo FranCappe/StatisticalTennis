@@ -32,6 +32,6 @@ app.post('/api/user', userController.create)
 
 app.get('/', (req, res) => {});
 
-app.listen(3000, () => {
-    console.log('Server running port 3000')
+app.listen(PORT, () => {
+    console.log('Server running in the port' + PORT)
 });
