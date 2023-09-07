@@ -1,5 +1,5 @@
 const { conectarDB, desconectarDB  } = require("../db/conection");
-const Hits = require("../db/schemas/hitsSchema");
+const Hits = require("../db/schemas/HitsSchema");
 
 
 const getAll = async (req, res) => {
@@ -14,9 +14,9 @@ const getAll = async (req, res) => {
 
 
 const create = async (req, res) => {
-    const {id, date, forehand, backhand, forehandVolley, backhandVolley, smash, slice, drop} = req.body;
+    const {date, forehand, backhand, forehandVolley, backhandVolley, smash, slice, drop} = req.body;
     await conectarDB();
-    const hits = new Hits (id, date, forehand, backhand, forehandVolley, backhandVolley, smash, slice, drop)
+    const hits = new Hits ({date, forehand, backhand, forehandVolley, backhandVolley, smash, slice, drop})
     const newHits = await hits.save();
     res.json(newHits);
 }
