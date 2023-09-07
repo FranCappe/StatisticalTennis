@@ -1,10 +1,9 @@
 const mongoose = require('mongoose');
-require('dotenv').config();
 
 const conectarDB = async () => {
     try {
-        await mongoose.connect(process.env.DB_URL);
-        console.log("Connect to the data base");
+        await mongoose.connect(process.env.dbUrl)
+        console.log("Conectado a la base de datos");
     } catch (error) {
         console.log(error);
     }
@@ -13,7 +12,7 @@ const conectarDB = async () => {
 const desconectarDB = async () => {
     try {
         await mongoose.disconnect();
-        console.log("Disconnect to the data base");
+        console.log("Desconectado de la base de datos");
     } catch (error) {
         console.log(error);
     }

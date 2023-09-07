@@ -4,14 +4,14 @@ const { Schema, model } = mongoose;
 
 const HitSchema = new Schema ({
     id: {type: String, required: true},
-    Date: {type: Date, required: true},
-    Forehand: {type: Number, required: true},
-    Backhand: {type: Number, required: true},
-    ForehandVolley: {type: Number, required: true},
-    BackhandVolley:  {type: Number, required: true},
-    Smash: {type: Number, required: true},
-    Slice: {type: Number, required: true},
-    Drop: {type: Number, required: true},
+    date: {type: Date, required: true},
+    forehand: {type: Number, required: true},
+    backhand: {type: Number, required: true},
+    forehandVolley: {type: Number, required: true},
+    backhandVolley:  {type: Number, required: true},
+    smash: {type: Number, required: true},
+    slice: {type: Number, required: true},
+    drop: {type: Number, required: true},
 
 
 });

@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require ('express');
 const app = express();
 const path = require ('path');
@@ -37,5 +38,5 @@ app.post('/api/hits', hitsController.create);
 
 
 app.listen(PORT, () => {
-    console.log('Server running in the port' + PORT)
+    console.log('Server running in the port' +  PORT)
 });

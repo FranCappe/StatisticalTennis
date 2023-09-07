@@ -9,15 +9,14 @@ window.onload = function(){      //pantalla de carga
 
     FORM.addEventListener ("submit", function(event){
         event.preventDefault();
-        console.log("test")
         let date = FORM['date'].value;    
-        let Forehand = FORM ['hit-forehand'].value;
-        let Backhand = FORM ['hit-backhand'].value;
-        let ForehandVolley = FORM ['hit-forehand-volley'].value;
-        let BackhandVolley = FORM ['hit-backhand-volley'].value;
-        let Smash = FORM ['hit-smash'].value;
-        let Slice = FORM ['hit-slice'].value;
-        let Drop = FORM ['hit-drop'].value;
+        let forehand = FORM ['hit-forehand'].value;
+        let backhand = FORM ['hit-backhand'].value;
+        let forehandVolley = FORM ['hit-forehand-volley'].value;
+        let backhandVolley = FORM ['hit-backhand-volley'].value;
+        let smash = FORM ['hit-smash'].value;
+        let slice = FORM ['hit-slice'].value;
+        let drop = FORM ['hit-drop'].value;
         
         
         
@@ -25,10 +24,10 @@ window.onload = function(){      //pantalla de carga
 
         fetch('/api/hits', {
             method: 'POST',
-            body: JSON.stringify({date, Forehand, Backhand, ForehandVolley, BackhandVolley, Smash, Slice, Drop}),
+            body: JSON.stringify({date, forehand, backhand, forehandVolley, backhandVolley, smash, slice, drop}),
             headers: {
                 'Content-Type': 'application/json'
             }
         })
-        
+         
 })}
