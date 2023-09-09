@@ -3,18 +3,20 @@ const { Schema, model } = mongoose;
 
 
 const HitSchema = new Schema ({
-    id: {type: String, required: true},
-    date: {type: Date, required: true},
-    forehand: {type: Number, required: true},
-    backhand: {type: Number, required: true},
-    forehandVolley: {type: Number, required: true},
-    backhandVolley:  {type: Number, required: true},
-    smash: {type: Number, required: true},
-    slice: {type: Number, required: true},
-    drop: {type: Number, required: true},
+    date: {type: Date},
+    forehand: {type: Number},
+    backhand: {type: Number},
+    forehandVolley: {type: Number},
+    backhandVolley:  {type: Number},
+    smash: {type: Number},
+    slice: {type: Number},
+    drop: {type: Number},
 
 
 });
+
+
+
 
 const Hits = model('Hits', HitSchema);
 

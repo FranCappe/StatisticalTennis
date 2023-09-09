@@ -34,7 +34,7 @@
         <br>
         <br>
         <br>
-        <form id="hits-form">
+        <form id="hits-form" method="post" action="/server/controllers/hitsController.js"  >
             <div class="form-group">
                 <label for="dob">Selection of the days you have played:</label>
                 <input type="date" id="dob" name="date" required>
@@ -66,12 +66,12 @@
             <br>
             <br>
             <label for="hit-backhand-volley">Slice</label>
-            <input type="number" id="hit-smash" name="hit-slice">
+            <input type="number" id="hit-slice" name="hit-slice">
             <br>
             <br>
             <br>
             <label for="hit-backhand-drop">Drop</label>
-            <input type="number" id="hit-smash" name="hit-drop">
+            <input type="number" id="hit-drop" name="hit-drop">
             <br>
             <br>
             <br>

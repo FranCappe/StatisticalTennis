@@ -1,5 +1,5 @@
 const { conectarDB, desconectarDB  } = require("../db/conection");
-const Hits = require("../db/schemas/HitsSchema");
+const Hits = require("../db/schemas/hitsSchema");
 
 
 const getAll = async (req, res) => {
