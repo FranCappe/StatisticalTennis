@@ -18,6 +18,7 @@ window.onload = function(){      //pantalla de carga
         let slice = FORM ['hit-slice'].value;
         let drop = FORM ['hit-drop'].value;
         
+        console.log({date, forehand, backhand, forehandVolley, backhandVolley, smash, slice, drop})
         
         
         //El fetch para la api de hits 

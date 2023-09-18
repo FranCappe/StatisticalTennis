@@ -29,7 +29,7 @@ app.get('/service', navegationController.getService);
 
 app.get('/api/users', userController.getAll);
 app.post('/api/user', userController.create);
-
+app.post('/login', userController.login);
 
 //API HITS
 
@@ -38,5 +38,5 @@ app.post('/api/hits', hitsController.create);
 
 
 app.listen(PORT, () => {
-    console.log('Server running in the port' +  PORT)
+    console.log('Server running in the port'  +  PORT)
 });
