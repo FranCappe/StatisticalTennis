@@ -16,9 +16,6 @@ const getAll = async (req, res) => {
 const create = async (req, res) => {
   try {
     const { date, errorsUnforcered, doubleFault } = req.body;
-    if (typeof errorsUnforcered !== 'number' || typeof doubleFault !== 'number') {
-      return res.status(400).json({ error: 'Los valores de errorsUnforcered y doubleFault deben ser números válidos.' });
-    }
     await conectarDB();
     const errors = new Errors({ date, errorsUnforcered, doubleFault });
     const newErrors = await errors.save();

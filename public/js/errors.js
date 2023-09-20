@@ -10,8 +10,8 @@ window.onload = function(){
     FormularioError.addEventListener('submit', (e) => {
             e.preventDefault();
             const date = FormularioError ['date'].value;
-            const doubleFault = FormularioError ['double-fault']
-            const errorsUnforcered = FormularioError ['unforced-errors']
+            const doubleFault = FormularioError ['double-fault'].value;
+            const errorsUnforcered = FormularioError ['unforced-errors'].value;
         console.log({date, doubleFault, errorsUnforcered})
 
     fetch('/api/errors', {
