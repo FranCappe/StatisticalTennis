@@ -31,7 +31,7 @@
         <hr>
         <br>
         <br>
-         <form  id="FormularioError" method="post">
+         <form  id="FormularioError" method="post" action="/api/errors">
         <div class="form-group">
             <label for="dob">Selection of the days you have played:</label>
             <input type="date" id="date" name="date" required>
@@ -39,16 +39,16 @@
         <br>
         <br>
         <label for="double-fault">Double Fault</label>
-        <input type="number" id="double-fault" name="double-fault">
+        <input type="number" id="double-fault" name="double-fault" required >
         <br>
         <br>
         <br>
         <label for="unforced-errors">Unforced Errors</label>
-        <input type="number" id="unforced-errors" name="unforced-errors">
+        <input type="number" id="unforced-errors" name="unforced-errors" required>
         <br>
         <br>
         <br>
-        <button type="button" class="btn btn-success" id="enjoyBtn4">Enjoy!</button>
+        <button type="submit" class="btn btn-success" id="enjoyBtn4">Enjoy!</button>
         <br>
         <br>
         <br>
