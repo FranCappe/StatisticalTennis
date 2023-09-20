@@ -13,7 +13,8 @@ app.use(express.json());
 
 const navegationController = require ('./server/controllers/navegationController');
 const userController = require ('./server/controllers/userController');
-const hitsController = require ('./server/controllers/hitsController')
+const hitsController = require ('./server/controllers/hitsController');
+const errorsController = require ('./server/controllers/errorsController');
 
 //ROUTES
 app.get('/', navegationController.getIndex);
@@ -29,12 +30,16 @@ app.get('/service', navegationController.getService);
 
 app.get('/api/users', userController.getAll);
 app.post('/api/user', userController.create);
-app.post('/login', userController.login);
+app.post('/api/login', userController.login);
 
 //API HITS
 
 app.get('/api/hits', hitsController.getAll);
 app.post('/api/hits', hitsController.create);
+
+//API ERRORS
+app.get('/api/errors', errorsController.getAll)
+app.post('/api/errors', errorsController.create)
 
 
 app.listen(PORT, () => {

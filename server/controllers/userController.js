@@ -51,7 +51,7 @@ const login = async (req, res) => {
             // ...
 
             // Redirige al usuario a la página de inicio o al panel de control, o donde desees
-            res.redirect('/index.html');
+            res.redirect('/login.html');
         } else {
             // Si las credenciales no son válidas, puedes enviar un mensaje de error al cliente
             res.status(401).json({ error: "This information is incorrect" });
