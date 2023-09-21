@@ -252,3 +252,11 @@ div{
 .bordeTexto{
     border-radius: 300px;
 }
+
+
+body {
+    background-image: url('public/images/imgjeje.png');
+    background-size: cover; /* Ajusta la imagen al tamaño de la ventana del navegador */
+    /* Evita que la imagen se repita */
+    background-attachment: fixed; /* Fija la imagen en su posición */
+}

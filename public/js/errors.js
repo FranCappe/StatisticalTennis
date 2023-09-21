@@ -14,6 +14,7 @@ window.onload = function(){
             const errorsUnforcered = FormularioError ['unforced-errors'].value;
         console.log({date, doubleFault, errorsUnforcered})
 
+        
     fetch('/api/errors', {
         method: 'POST',
         body: JSON.stringify(date, doubleFault, errorsUnforcered),
