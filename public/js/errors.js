@@ -4,10 +4,10 @@ window.onload = function(){
     $('body').removeClass('hidden')
 
 
-    const FormularioError = document.getElementById('FormularioError')
+const FormularioError = document.getElementById('FormularioError')
     console.log(FormularioError)
 
-    FormularioError.addEventListener('submit', (e) => {
+FormularioError.addEventListener('submit', (e) => {
             e.preventDefault();
             const date = FormularioError ['date'].value;
             const doubleFault = FormularioError ['double-fault'].value;
@@ -17,7 +17,7 @@ window.onload = function(){
         
     fetch('/api/errors', {
         method: 'POST',
-        body: JSON.stringify(date, doubleFault, errorsUnforcered),
+        body: JSON.stringify({date, doubleFault, errorsUnforcered}),
         headers: {
             'Content-Type': 'application/json'
         }
