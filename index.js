@@ -43,7 +43,7 @@ app.post('/api/errors', errorsController.create)
 
 //API SERVICE
 app.get('/api/service', serviceController.getAll)
-app.get('/api/service', serviceController.create)
+app.post('/api/service', serviceController.create)
 
 app.listen(PORT, () => {
     console.log('Server running in the port'  +  PORT)
