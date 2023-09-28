@@ -15,7 +15,7 @@ const navegationController = require ('./server/controllers/navegationController
 const userController = require ('./server/controllers/userController');
 const hitsController = require ('./server/controllers/hitsController');
 const errorsController = require ('./server/controllers/errorsController');
-
+const serviceController = require ('./server/controllers/serviceController');
 //ROUTES
 app.get('/', navegationController.getIndex);
 app.get('/hits', navegationController.getHits);
@@ -41,6 +41,9 @@ app.post('/api/hits', hitsController.create);
 app.get('/api/errors', errorsController.getAll)
 app.post('/api/errors', errorsController.create)
 
+//API SERVICE
+app.get('/api/service', serviceController.getAll)
+app.get('/api/service', serviceController.create)
 
 app.listen(PORT, () => {
     console.log('Server running in the port'  +  PORT)
