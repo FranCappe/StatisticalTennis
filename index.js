@@ -1,5 +1,6 @@
 require('dotenv').config();
 const express = require ('express');
+const helmet = require('helmet');
 const app = express();
 const path = require ('path');
 const PORT = process.env.PORT || 8000;
@@ -7,15 +8,18 @@ const PORT = process.env.PORT || 8000;
 //MIDDLEWARE
 app.use(express.static(path.join(__dirname, './public')));
 app.use(express.json());
+app.use(helmet());
+
 
 
 //CONTROLLERS
-
 const navegationController = require ('./server/controllers/navegationController');
 const userController = require ('./server/controllers/userController');
 const hitsController = require ('./server/controllers/hitsController');
 const errorsController = require ('./server/controllers/errorsController');
 const serviceController = require ('./server/controllers/serviceController');
+
+
 //ROUTES
 app.get('/', navegationController.getIndex);
 app.get('/hits', navegationController.getHits);

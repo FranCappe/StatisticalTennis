@@ -1,9 +1,12 @@
-window.onload = function(){ //agregando PRELOADER a la pagina web 
-    alert('Load successfully');
-    $('#onload').fadeOut();
-    $('body').removeClass('hidden');
-
+window.onload = function(){
+    setTimeout(function(){
+        $('#onload').fadeOut();
+        $('body').removeClass('hidden')
+    }, 1000);
+    
 }
+
+
 
 
 

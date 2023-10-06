@@ -1,3 +1,6 @@
+const jwt = require('jsonwebtoken');
+const bcrypt = require('bcrypt');
+
 const { conectarDB, desconectarDB  } = require("../db/conection");
 const User = require("../db/schemas/userSchema");
 
@@ -42,28 +45,47 @@ const deleteUser = async (req, res) => {
 
 const login = async (req, res) => {
     try {
-        const { email, password } = req.body; 
-        // Realiza la lógica de autenticación aquí (ejemplo simplificado)
-        // Verifica si el usuario y la contraseña son válidos
-        if (email === 'email' && password === 'password') {
-            // Si las credenciales son válidas, puedes considerar que el inicio de sesión es exitoso
-            // Aquí puedes realizar otras acciones, como generar una sesión o establecer una cookie de autenticación
-            // ...
+        const { email, password } = req.body;
 
-            // Redirige al usuario a la página de inicio o al panel de control, o donde desees
-            res.redirect('/login.html');
+        await conectarDB();
+        const user = await User.findOne({ email });
+
+        if (user && bcrypt.compareSync(password, user.password)) {
+            // Las credenciales son válidas
+            // Puedes generar un token de autenticación y enviarlo como respuesta
+            const token = generateAuthToken(user); // Implementa esta función para generar un token
+
+            res.status(200).json({ token });
         } else {
-            // Si las credenciales no son válidas, puedes enviar un mensaje de error al cliente
-            res.status(401).json({ error: "This information is incorrect" });
+            // Las credenciales no son válidas
+            res.status(401).json({ error: "Credenciales incorrectas" });
         }
+
+        await desconectarDB();
     } catch (error) {
-        // Manejo de errores en caso de problemas durante el inicio de sesión
         console.error("Error en login:", error);
         res.status(500).json({ error: "Error en el inicio de sesión" });
     }
 };
 
 
+function generateAuthToken(user) {
+    const secretKey = '0511_FND'; // Deberías guardar esta clave en una variable de entorno
+    const payload = {
+        user: {
+            id: user.id, // Puedes incluir cualquier dato del usuario que desees en el token
+            username: user.username
+            // ...otros datos que quieras incluir
+        }
+    };
+
+    const options = {
+        expiresIn: '1h' // El token expirará en 1 hora, puedes ajustar esto según tus necesidades
+    };
+
+    const token = jwt.sign(payload, secretKey, options);
+    return token;
+}
 
 
 module.exports = {

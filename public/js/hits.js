@@ -1,7 +1,10 @@
-window.onload = function(){      //pantalla de carga
-    alert('Loaded succesfully');
-    $('#onload').fadeOut();
-    $('body').removeClass('hidden');
+window.onload = function(){
+    setTimeout(function(){
+        $('#onload').fadeOut();
+        $('body').removeClass('hidden')
+    }, 1000);
+    
+}
     const FORM = document.getElementById('hits-form')
     console.log(FORM)
 
@@ -31,4 +34,4 @@ window.onload = function(){      //pantalla de carga
             }
         })
          
-})}
+})

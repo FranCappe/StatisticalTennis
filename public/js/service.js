@@ -1,7 +1,9 @@
 window.onload = function(){
-    alert('Loaded succesfully')
-    $('#onload').fadeOut();
-    $('body').removeClass('hidden')
+    setTimeout(function(){
+        $('#onload').fadeOut();
+        $('body').removeClass('hidden')
+    }, 1000);
+    
 }
 
 const FORM = document.getElementById('service-form')
@@ -29,4 +31,8 @@ FORM.addEventListener ("submit", function(event){
    .then(data => console.log(data))
    .catch(err => console.log(err))
 
-})
+   window.location.href = "carga_completada.html";
+
+});
+
+

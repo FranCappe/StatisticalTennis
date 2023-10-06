@@ -87,10 +87,3 @@ h1{
   transform: scale(1.05);
 }
 
-.logo img{
-  width: 150px;
-  height: auto;
-  position: relative;
-  display: flex;
-  right: 50px;
-}

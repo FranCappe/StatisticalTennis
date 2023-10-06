@@ -1,7 +1,10 @@
 window.onload = function(){
-    alert('Loaded succesfully');
-    $('#onload').fadeOut();
-    $('body').removeClass('hidden')
+    setTimeout(function(){
+        $('#onload').fadeOut();
+        $('body').removeClass('hidden')
+    }, 1000);
+    
+}
 
 
 const FormularioError = document.getElementById('FormularioError')
@@ -27,4 +30,4 @@ FormularioError.addEventListener('submit', (e) => {
    .then(data => console.log(data))
    .catch(err => console.log(err))
 
-})}; 
+}); 
