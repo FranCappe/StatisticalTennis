@@ -8,7 +8,7 @@ window.onload = function(){
 
 const FORM = document.getElementById('service-form')
     console.log(FORM)
-FORM.addEventListener ("submit", function(event){
+    FORM.addEventListener ("submit", function(event){
     event.preventDefault();
     let date = FORM['date'].value; 
     let firstServe = FORM['service-first-serve'].value;
@@ -31,8 +31,21 @@ FORM.addEventListener ("submit", function(event){
    .then(data => console.log(data))
    .catch(err => console.log(err))
 
-   window.location.href = "carga_completada.html";
 
+   window.onload = function (){
+    setTimeout(function() {
+        window.location.href = "datos_cargados_correctamente.html";
+    }, 3000);
+    }
+   
+
+    
+    
+
+    
+    
+    
+    
 });
 
 

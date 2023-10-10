@@ -33,5 +33,10 @@ window.onload = function(){
                 'Content-Type': 'application/json'
             }
         })
+
+    
+        setTimeout(function() {
+            window.location.href = "carga_completada.html";
+            }, 3000); 
          
 })

@@ -26,4 +26,9 @@ formulario.addEventListener('submit', (e) => {
    .then(response => response.json())
    .then(data => console.log(data))
    .catch(err => console.log(err))
+
+
+   setTimeout(function() {
+    window.location.href = "carga_completada.html";
+    }, 3000);
 }); 
