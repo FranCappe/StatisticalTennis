@@ -1,3 +1,62 @@
+#border-container {
+    border: 2px solid #237d00;
+    padding: 20px;
+    margin: 10px;
+    
+    align-items: center;
+    border-radius: 5px;
+    height: 150px; /* Corregido la coma por un punto y coma aquí */
+    transition: box-shadow 0.1s, transform 0.1s; /* Eliminé el punto delante de .1s */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#border-container:hover {
+    box-shadow: 0px 0px 50px rgba(0, 0, 0, 1);
+}
+
+
+#border-service{
+    border: 2px solid #237d00;
+    padding: 20px;
+    margin: 10px;
+    width: 400px;
+    align-items: center;
+    border-radius: 5px;
+    height: 150px; /* Corregido la coma por un punto y coma aquí */
+    transition: box-shadow 0.1s, transform 0.1s; /* Eliminé el punto delante de .1s */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#border-service:hover{
+    box-shadow: 0px 0px 50px rgba(0, 0, 0, 1);
+
+}
+
+
+#border-error{
+    border: 2px solid #237d00;
+    padding: 20px;
+    margin: 10px;
+    width: 400px;
+    align-items: center;
+    border-radius: 5px;
+    height: 150px; /* Corregido la coma por un punto y coma aquí */
+    transition: box-shadow 0.1s, transform 0.1s; /* Eliminé el punto delante de .1s */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#border-error:hover{
+    box-shadow: 0px 0px 50px rgba(0, 0, 0, 1);
+}
 
 
 
